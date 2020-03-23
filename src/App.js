@@ -1,5 +1,5 @@
 import React from 'react'
-// (1) import in react router
+// (2) second two ingredients from react router
 
 import './App.css'
 
@@ -15,7 +15,7 @@ function App() {
             <li><a href='/'>Noelle Laureano</a></li>
           </div>
           <div className='nav-menu'>
-            {/* (3) update links */}
+            {/* (4) update links */}
             <li><a href='/projects'>Projects</a></li>
             <li><a href='/experience'>Experience</a></li>
             <li><a href='/contact'>Contact</a></li>
@@ -23,7 +23,7 @@ function App() {
         </ul>
       </nav>
 
-      {/* (2) Routes */}
+      {/* (3) Routes */}
 
     </div>
   )
