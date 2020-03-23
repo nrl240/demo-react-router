@@ -3,7 +3,6 @@ import { Route, Link } from 'react-router-dom'
 import './App.css'
 
 import { Bio, Experience, Projects, Contact } from './Components'
-import jobHistory from './Data/jobHistory'
 
 function App() {
   return (
