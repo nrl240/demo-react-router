@@ -5,14 +5,14 @@ const SingleJob = (props) => {
 
   return (
     <div className='jobs-container'>
-      { jobs.map(job => (
-          <div className='job-container'>
+      { jobs.map((job, i) => (
+          <div key={`job-${i}`} className='job-container'>
             <h2>{job.company}</h2>
             <h3>{job.title}</h3>
             <span>{job.dates}</span>
             <ul className='job-description'>
-              { job.description.map(bullet =>
-                  <li>{bullet}</li>
+              { job.description.map((bullet, i) =>
+                  <li key={`bullet-${i}`}>{bullet}</li>
                 )
               }
             </ul>

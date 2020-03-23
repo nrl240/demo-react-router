@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom'
 import './App.css'
 
 import { Bio, Experience, Projects, Contact } from './Components'
+import jobHistory from './Data/jobHistory'
 
 function App() {
   return (
@@ -23,7 +24,12 @@ function App() {
 
       <Route exact path='/' component={Bio} />
       <Route path='/projects' component={Projects} />
-      <Route path='/experience' component={Experience} />
+      <Route
+        path='/experience'
+        render={ (routeProps) => (
+          <Experience jobHistory={jobHistory} {...routeProps} />
+         )}
+      />
       <Route path='/contact' render={(routeProps) =>
         <Contact routeProps={routeProps} />}
       />
