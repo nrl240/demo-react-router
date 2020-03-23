@@ -1,5 +1,6 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+// (1) import in react router
+
 import './App.css'
 
 import { Bio, Experience, Projects, Contact } from './Components'
@@ -11,22 +12,18 @@ function App() {
       <nav>
         <ul>
           <div className='nav-name'>
-            <li><Link to='/'>Noelle Laureano</Link></li>
+            <li><a href='/'>Noelle Laureano</a></li>
           </div>
           <div className='nav-menu'>
-            <li><Link to='/projects'>Projects</Link></li>
-            <li><Link to='/experience'>Experience</Link></li>
-            <li><Link to='/contact'>Contact</Link></li>
+            {/* (3) update links */}
+            <li><a href='/projects'>Projects</a></li>
+            <li><a href='/experience'>Experience</a></li>
+            <li><a href='/contact'>Contact</a></li>
           </div>
         </ul>
       </nav>
 
-      <Route exact path='/' component={Bio} />
-      <Route path='/projects' component={Projects} />
-      <Route path='/experience' component={Experience} />
-      <Route path='/contact' render={(routeProps) =>
-        <Contact routeProps={routeProps} />}
-      />
+      {/* (2) Routes */}
 
     </div>
   )
