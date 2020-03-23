@@ -1,6 +1,5 @@
 import React from 'react'
 import { SingleJob } from './'
-// import jobHistory from '../Data/jobHistory'
 
 const Experience = (props) => {
   console.log('^^^^ <Experience/> Props ^^^^')
@@ -10,7 +9,9 @@ const Experience = (props) => {
   return (
     <div>
       <h3>Experience</h3>
-      <SingleJob jobs={props.jobHistory} />
+      { props.jobHistory.map((job, i) => (
+        <SingleJob key={i} job={job} />
+      ))}
     </div>
   )
 }
