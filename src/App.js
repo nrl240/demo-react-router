@@ -4,6 +4,7 @@ import React from 'react'
 import './App.css'
 
 import { Bio, Experience, Projects, Contact } from './Components'
+import jobHistory from './Data/jobHistory'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 
       <nav>
         <ul>
+          {/* (4) update your anchor tags to React Router Links (href >> to) */}
           <div className='nav-name'>
             <li><a href='/'>Noelle Laureano</a></li>
           </div>
