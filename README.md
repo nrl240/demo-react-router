@@ -19,7 +19,7 @@
   )
   ```
 
-### **Step 3** - Second ingredient: `Route
+### **Step 3** - Second ingredient: `Route`
 - In the `/src/App.js` file, add to the top:
   - `import { Route } from 'react-router-dom'`
 - Add `Route`s inside the App component just before the closing `<div>` tag:
