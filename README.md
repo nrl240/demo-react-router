@@ -24,14 +24,14 @@
   - `import { Route } from 'react-router-dom'`
 - Add `Route`s inside the App component just before the closing `<div>` tag:
   - Prompt students for the necessary properties (`path` and `component`)
-  ```js
+  ```jsx
   <Route path='/' component={Bio} />
   <Route path='/projects' component={Projects} />
   <Route path='/experience' component={Experience} />
   <Route path='/contact' component={Contact} />
   ```
 - Demonstrate "fuzzy" matching in the browser then incorporate the `exact` prop
-  ```js
+  ```jsx
   <Route exact path='/' component={Bio} />
   ```
 - Demonstrate using the Network tab in Chrome dev tools that, as is, clicking the links in the browser causes the page to refresh
@@ -41,7 +41,7 @@
   - `import { Route, Link } from 'react-router-dom'`
 - Update all of the list item elements' anchor tags to `Link`s:
   - Prompt students for the necessary property (`to`)
-  ```js
+  ```jsx
   <div className='nav-name'>
     <li><Link to='/'>Noelle Laureano</Link></li>
   </div>
