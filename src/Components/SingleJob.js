@@ -1,10 +1,6 @@
 import React from 'react'
 
 const SingleJob = (props) => {
-  console.log('^^^^ <SingleJob/> Props ^^^^')
-  console.log(props)
-  console.log('^^^^ <SingleJob/> Props ^^^^')
-
   const { job } = props
 
   return (

@@ -1,9 +1,6 @@
 import React from 'react'
 
-const Bio = (routeProps) => {
-  console.log(`^^^^ routeProps ^^^^`)
-  console.log(routeProps)
-  console.log(`^^^^ routeProps ^^^^`)
+const Bio = () => {
 
   return (
     <div>
