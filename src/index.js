@@ -7,4 +7,7 @@ import App from './App'
 
 // (1) first ingredient from react router
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+)

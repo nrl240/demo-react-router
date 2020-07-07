@@ -1,7 +1,7 @@
 import React from 'react'
 import { SingleJob } from './'
 
-import jobHistory from './Data/jobHistory'
+import jobHistory from '../Data/jobHistory'
 
 const Experience = () => {
 
