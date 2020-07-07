@@ -2,11 +2,11 @@
 
 ## Live code for the React Router 101 lecture
 
-### **Step 1*** - Install `react-router-dom`
+### **Step 1** - Install `react-router-dom`
 - Run `npm i react-router-dom` in the terminal
 - Check that it was added to the `package.json` file successfully
 
-### **Step 2*** - First ingredient: `Router`
+### **Step 2** - First ingredient: `Router`
 - In the `/src/index.js` file, add to the top:
   - `import { BrowserRouter as Router } from 'react-router-dom'`
 - Wrap the entire React application in the `Router`
@@ -19,7 +19,7 @@
   )
   ```
 
-### **Step 3*** - Second ingredient: `Route
+### **Step 3** - Second ingredient: `Route
 - In the `/src/App.js` file, add to the top:
   - `import { Route } from 'react-router-dom'`
 - Add `Route`s inside the App component just before the closing `<div>` tag:
@@ -36,7 +36,7 @@
   ```
 - Demonstrate using the Network tab in Chrome dev tools that, as is, clicking the links in the browser causes the page to refresh
 
-### **Step 4*** - Third ingredient: `Link`
+### **Step 4** - Third ingredient: `Link`
 - In the `/src/App.js` file, add `Link` to the imports from 'react-router-dom':
   - `import { Route, Link } from 'react-router-dom'`
 - Update all of the list item elements' anchor tags to `Link`s:
