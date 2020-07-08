@@ -68,31 +68,40 @@
 
 ### **Step 2** - Using `render` to pass props
 - Let's say we don't want to import our jobHistory inside of the `Experience` component, and we would prefer to have it "higher up" in our application and pass it "down" using React-Router's `<Route>` `render` syntax
-  - Refactor the `App` component and demonstrate that no props are logging to the console with the following:
-    ```jsx
-    import jobHistory from './Data/jobHistory'
+  - Refactor and demonstrate that no props are logging to the console with the following:
+    - **`App.js`**
+      ```jsx
+      import jobHistory from './Data/jobHistory'
     
-    function App() {
-      return (
-        <div className="App">
+      function App() {
+        return (
+          <div className="App">
 
-          {/* ... */}
+            {/* ... */}
 
-          <Route path='/experience' render={ () => <Experience/> } />
+            <Route path='/experience' render={ () => <Experience/> } />
 
-        </div>
-      )
-    }
-    ```
+          </div>
+        )
+      }
+      ```
+     - **`Experience.js`**
+      ```jsx
+      const Experience = (props) => {
+        console.log('Experience props >>', props)
+
+        {/* ... */} 
+      }
+      ```
   - Refactor again, to pass `jobHistory` as a prop to the `Experience` component and show the `props` being logged to the console:
-    - `App.js`
+    - **`App.js`**
       ```jsx
       <Route
         path="/experience"
         render={() => <Experience jobHistory={jobHistory} />}
       />
       ```
-    - `Experience.js`
+    - **`Experience.js`**
       ```jsx
       const Experience = (props) => {
       console.log('Experience props >>', props)
