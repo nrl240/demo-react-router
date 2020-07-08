@@ -68,7 +68,7 @@
 
 ### **Step 2** - Using `render` to pass props
 - Let's say we don't want to import our jobHistory inside of the `Experience` component, and we would prefer to have it "higher up" in our application and pass it "down" using React-Router's `<Route>` `render` syntax
-  - Refactor the `App` component and demonstrate that no props are not logging to the console with the following:
+  - Refactor the `App` component and demonstrate that no props are logging to the console with the following:
     ```jsx
     import jobHistory from './Data/jobHistory'
     
@@ -85,12 +85,28 @@
     }
     ```
   - Refactor again, to pass `jobHistory` as a prop to the `Experience` component and show the `props` being logged to the console:
-    ```jsx
-    <Route
-      path="/experience"
-      render={() => <Experience jobHistory={jobHistory} />}
-    />
-    ```
+    - `App.js`
+      ```jsx
+      <Route
+        path="/experience"
+        render={() => <Experience jobHistory={jobHistory} />}
+      />
+      ```
+    - `Experience.js`
+      ```jsx
+      const Experience = (props) => {
+      console.log('Experience props >>', props)
+
+        return (
+          <div>
+            <h3>Experience</h3>
+            { props.jobHistory.map((job, i) => (
+              <SingleJob key={i} job={job} />
+            ))}
+          </div>
+        )
+      }
+      ```
 
 ### **Step 3** - Getting back our route props
 - Notice with the refactor, we lost our implicit route props: `history`, `location`, and `match`
