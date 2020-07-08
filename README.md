@@ -1,6 +1,8 @@
 # React Router Demo
 
-**<details><summary>Live code for the React Router 101 lecture:</summary>**
+## Step-by-Step Guide to Live Code
+
+**<details><summary>React Router 101</summary>**
 
 ## Live code for the React Router 101 lecture
 **Branch:** start-101
@@ -56,7 +58,7 @@
   ```
 </details>
 
-**<details><summary>Live code for the React Router 201 lecture:</summary>**
+**<details><summary>React Router 201</summary>**
   
 ## Live code for the React Router 201 lecture
 **Branch:** start-201
