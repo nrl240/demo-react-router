@@ -1,5 +1,7 @@
 # React Router Demo
 
+**<details><summary>Live code for the React Router 101 lecture:</summary>**
+
 ## Live code for the React Router 101 lecture
 **Branch:** start-101
 
@@ -52,6 +54,9 @@
     <li><Link to='/contact'>Contact</Link></li>
   </div>
   ```
+</details>
+
+**<details><summary>Live code for the React Router 201 lecture:</summary>**
   
 ## Live code for the React Router 201 lecture
 **Branch:** start-201
@@ -138,3 +143,4 @@
   />
   ```
   
+</details>
