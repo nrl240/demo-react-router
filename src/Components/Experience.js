@@ -1,16 +1,15 @@
 import React from 'react';
 import { SingleJob } from './';
 
-// import jobHistory from '../Data/jobHistory';
+import { jobHistory } from '../data';
 
-const Experience = (props) => {
+const Experience = () => {
   return (
     <div>
       <h2>Experience</h2>
-      {props.jobHistory.map((job, i) => (
+      {jobHistory.map((job, i) => (
         <SingleJob key={i} job={job} />
       ))}
-      <button onClick={() => props.history.goBack()}>Go Back</button>
     </div>
   );
 };

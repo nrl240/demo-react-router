@@ -1,7 +1,8 @@
 import React from 'react';
 
-const SingleProject = (props) => {
-  const { projectHistory } = props;
+import { projectHistory } from '../data';
+
+const SingleProject = () => {
   const project = projectHistory.find(
     (project) => project.slug === props.match.params.slug
   );

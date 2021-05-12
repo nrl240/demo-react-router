@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -7,10 +6,8 @@ import {
   Bio,
   Experience,
   Projects,
-  SingleProject,
   Contact
 } from './Components';
-import { jobHistory, projectHistory } from './data';
 
 function App() {
   return (
@@ -19,51 +16,26 @@ function App() {
         <ul>
           <div className='nav-name'>
             <li>
-              <Link to='/'>Noelle Laureano</Link>
+              <a href='/'>Noelle Laureano</a>
             </li>
           </div>
           <div className='nav-menu'>
             <li>
-              <Link to='/projects'>Projects</Link>
+              <a href='/projects'>Projects</a>
             </li>
             <li>
-              <Link to='/experience'>Experience</Link>
+              <a href='/experience'>Experience</a>
             </li>
             <li>
-              <Link to='/contact'>Contact</Link>
+              <a href='/contact'>Contact</a>
             </li>
           </div>
         </ul>
       </nav>
-
-      {/* REACT ROUTER ROUTES (FRONT END ROUTING) */}
-      <Switch>
-        <Route exact path='/' component={Bio} />
-        <Route
-          exact
-          path='/projects'
-          render={() => <Projects projectHistory={projectHistory} />}
-        />
-        <Route
-          path='/projects/:slug'
-          render={(routeProps) => (
-            <SingleProject {...routeProps} projectHistory={projectHistory} />
-          )}
-        />
-        <Route
-          path='/experience'
-          render={(routeProps) => (
-            <Experience
-              // match={routeProps.match}
-              // location={routeProps.location}
-              // history={routeProps.history}
-              {...routeProps}
-              jobHistory={jobHistory}
-            />
-          )}
-        />
-        <Route path='/contact' component={Contact} />
-      </Switch>
+      <Bio />
+      <Experience />
+      <Projects />
+      <Contact />
     </div>
   );
 }

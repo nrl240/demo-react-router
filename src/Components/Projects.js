@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Projects = (props) => {
-  const { projectHistory } = props;
+import { projectHistory } from '../data';
 
+const Projects = () => {
   return (
     <div>
       <h2>Projects</h2>
@@ -11,7 +10,7 @@ const Projects = (props) => {
         {projectHistory.map((project, idx) => {
           return (
             <li key={idx}>
-              <Link to={`/projects/${project.slug}`}>{project.name}</Link>
+              <a href={`/projects/${project.slug}`}>{project.name}</a>
             </li>
           );
         })}
