@@ -1,27 +1,20 @@
-import React from 'react'
+import React from 'react';
 
 const SingleJob = (props) => {
-  console.log('^^^^ <SingleJob/> Props ^^^^')
-  console.log(props)
-  console.log('^^^^ <SingleJob/> Props ^^^^')
-
-  const { job } = props
+  const { job } = props;
 
   return (
-    <div className='jobs-container'>
-      <div className='job-container'>
-        <h2>{job.company}</h2>
-        <h3>{job.title}</h3>
-        <span>{job.dates}</span>
-        <ul className='job-description'>
-          { job.description.map((bullet, i) =>
-              <li key={`bullet-${i}`}>{bullet}</li>
-            )
-          }
-        </ul>
-      </div>
+    <div className='container'>
+      <h3>{job.company}</h3>
+      <h4>{job.title}</h4>
+      <span>{job.dates}</span>
+      <ul className='job-description'>
+        {job.description.map((bullet, i) => (
+          <li key={`bullet-${i}`}>{bullet}</li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default SingleJob
+export default SingleJob;
